@@ -18,7 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->char('name', 100);
             $table->char('email', 100)->unique(); 
             $table->char('logo', 200);
-            $table->char('website', 200);
+            $table->char('website', 200)->nullable();
             $table->integer('status')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
